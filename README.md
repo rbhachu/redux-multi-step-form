@@ -42,7 +42,6 @@ npm start
 
 
 ## Components
-The App consists of .............
 
 ### Form User Signup Component
 Component for Signup Page
@@ -52,6 +51,7 @@ Component for Signup Page
 | pageTitle | form page stage title | {'User Form:'} | `string` |
 | submitButtonText | submit next button display text | {'Next'} | `string` |
 | previousButton | shows / hides Back button | {false} | `boolean` |
+
 <br /><br />
 
 ### Form User Privacy Component
@@ -62,6 +62,7 @@ Component for Privacy Page
 | pageTitle | form page stage title | {'Privacy Form:'} | `string` |
 | submitButtonText | submit next button display text | {'Next'} | `string` |
 | previousButton | shows / hides Back button | {true} | `boolean` |
+
 <br /><br />
 
 ### Form User Completion Component
@@ -71,6 +72,7 @@ Component for Completion Page
 | ------------- |:-------------:| -----:| -----:|
 | pageTitle | form page stage title | {'Success!'} | `string` |
 | successMessage | Success message to display | {'Thanks for your submission'} | `string` |
+
 <br /><br />
 
 
@@ -79,7 +81,8 @@ __React Testing Library__
 <br /><br />
 run `npm test` to perform testing
 <br />
-Basic test to check page h1 title loads with test id. 
+Basic test to check page h1 title loads with test id.
+<br />
 ![React Testing Library 1](./md/test1.png)
 ![React Testing Library 2](./md/test2.png)
 
