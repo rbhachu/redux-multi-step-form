@@ -5,7 +5,6 @@ __[Live Link](https://unruffled-mcnulty-71b799.netlify.app)__
 Created with React, Redux Toolkit, and SASS. Plus React Lazy Load for Component loading.
 <br /><br />
 
-
 ## Questions
 ### How you would change the configuration of a certain page?
 The components allow very easy control via props to change page titles, submit button text, success message and even enable dynamic back buttons too.
