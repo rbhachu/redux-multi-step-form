@@ -15,7 +15,7 @@ The app uses a 'views' approach, so new components can easily be added to the si
 <br />
 
 ### How you would implement going back a page?
-The components feature props to enable/disable a dynamic 'Back' button as outlined in the prop documention.
+The components feature props to enable/disable a dynamic 'Back' button as outlined in the prop documention below.
 <br /><br />
 
 
@@ -23,6 +23,7 @@ The components feature props to enable/disable a dynamic 'Back' button as outlin
 - Mult-Step Signup Form
 - Form Progression Path
 - Modular/Scalable App
+- Form Validation
 - Custom fav icon
 - Lazyloading for image and components
 - React Testing Library pass???
@@ -52,7 +53,7 @@ Component for Signup Page
 | submitButtonText | submit next button display text | {'Next'} | `string` |
 | previousButton | shows / hides Back button | {false} | `boolean` |
 
-<br /><br />
+<br />
 
 ### Form User Privacy Component
 Component for Privacy Page
@@ -63,7 +64,7 @@ Component for Privacy Page
 | submitButtonText | submit next button display text | {'Next'} | `string` |
 | previousButton | shows / hides Back button | {true} | `boolean` |
 
-<br /><br />
+<br />
 
 ### Form User Completion Component
 Component for Completion Page
@@ -73,7 +74,7 @@ Component for Completion Page
 | pageTitle | form page stage title | {'Success!'} | `string` |
 | successMessage | Success message to display | {'Thanks for your submission'} | `string` |
 
-<br /><br />
+<br />
 
 
 ## Testing

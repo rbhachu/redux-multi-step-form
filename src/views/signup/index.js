@@ -17,7 +17,12 @@ const Signup = () => {
     <main>
       <div className="form-wrapper">
 
-        <h1 data-testid="Signup-Title" className="text-center">Signup Form</h1>
+        <h1 
+          data-testid="Signup-Title" 
+          className="text-center"
+        >
+          Signup Form
+        </h1>
         
         <section>
           
