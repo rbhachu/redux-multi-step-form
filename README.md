@@ -11,7 +11,7 @@ The components allow very easy control via props to change page titles, submit b
 <br />
 
 ### How you would add new pages?
-The app uses a 'views' approach, so new components can easily be added to the signup view page by linking to new components from the componenets directory. Then also adding them to the progress component in the signup views page too.
+The app uses a 'views' approach, so new components can easily be added to the signup view page by linking to new components from the components directory. Then also adding them to the progress component in the signup views page too.
 <br />
 
 ### How you would implement going back a page?
@@ -20,18 +20,18 @@ The components feature props to enable/disable a dynamic 'Back' button as outlin
 
 
 ## Features
-- Mult-Step Signup Form
+- Multi-Step Signup Form
 - Form Progression Path
 - Modular/Scalable App
 - Form Validation
 - Custom fav icon
-- Lazyloading for image and components
-- React Testing Library pass???
+- Lazy Loading for image and components
+- React Testing Library pass
 - PWA testing pass
 - Lighthouse testing pass
 - HTML testing pass
 - CSS testing pass
-- Accesability testing pass
+- Accessibility testing pass
 <br />
 
 ## Run

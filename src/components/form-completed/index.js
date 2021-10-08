@@ -22,11 +22,11 @@ function FormUserResult({ pageTitle, successMessage }) {
           <img 
             className="fade-in-image"
             src={IMGgreentick} 
-            alt={successMessage || 'Thanks1!'}
+            alt={successMessage || 'Success!'}
           />
 
           <p>
-            {successMessage || 'Thanks2!'}
+            {successMessage || 'Thank you, please check your email1!'}
           </p>
 
       </div>
