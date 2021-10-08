@@ -1,0 +1,36 @@
+@use '../../assets/scss/variables' as *; // * removes need to call namespace
+@use '../../assets/scss/mixin' as *; // * removes need to call namespace
+
+.btn-array {
+  display: flex;
+  //justify-content: space-between;
+  //justify-content:space-evenly;
+  justify-content: space-around;
+  margin: 0;
+
+  p {
+    margin: 0 !important;
+
+    input[type="submit"] {
+      margin: 0;
+      height: auto;
+      width: auto;
+      padding: $spacing-vsmall $spacing-xlarge;
+      font-weight: $font-weight-light;
+      text-align: center;
+      border: none;
+      border-radius: $border-radius-small;
+      color: $third-color; // not working!
+      background-color: $primary-color-background;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $primary-color-highlight;
+        color: $primary-color;
+      }
+  
+    }
+
+  }
+
+}

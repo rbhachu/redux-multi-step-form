@@ -1,0 +1,36 @@
+@use '../../assets/scss/variables' as *; // * removes need to call namespace
+@use '../../assets/scss/buttons' as *; // * removes need to call namespace
+
+form#form-privacy {
+  margin-top: $spacing-medium;
+
+  p {
+    &.form-boxes {
+      padding-bottom: $spacing-medium;
+    }
+  }
+
+  label {
+    font-size: $font-size-standard;
+    font-weight: $font-weight-heavy;
+    position: relative;
+    top: -$spacing-vsmall;
+  }
+
+  input[type="checkbox"] { // target checkboxes
+    margin: 0 $spacing-medium $spacing-medium 0;
+    width: $spacing-large; // check box size w
+    height: $spacing-large; // check box size h
+    background-color: $primary-color-highlight; // ???
+
+    &:hover {
+      background-color: $primary-color-highlight !important; // ???
+      border: 1px solid $primary-color-highlight !important; // ???
+      + b {
+        border-color: $primary-color-highlight !important; // ???
+      }
+    }
+
+  }
+
+}

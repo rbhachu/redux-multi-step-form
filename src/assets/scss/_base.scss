@@ -1,0 +1,62 @@
+@use './variables' as *; // * removes need to call namespace
+@use './mixin' as *; // * removes need to call namespace
+
+// base styles
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: $font-default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  font-size: $font-size-base;
+  color: $primary-color;
+
+  //background-color: $primary-color-background;
+  background: rgb(208,57,135);
+  background: -moz-linear-gradient(180deg, rgba(208,57,135,1) 0%, rgba(36,74,173,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(208,57,135,1) 0%, rgba(36,74,173,1) 100%);
+  background: linear-gradient(180deg, rgba(208,57,135,1) 0%, rgba(36,74,173,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d03987",endColorstr="#244aad",GradientType=1);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  @include font-template($font-size-large, $font-weight-heavy, $spacing-xlarge !important);
+}
+
+h2 {
+  @include font-template($font-size-medium, $font-weight-heavy, $spacing-medium !important);
+}
+
+h3 {
+  @include font-template($font-size-medium, $font-weight-medium, $spacing-medium !important);
+}
+
+p, ul {
+  font-size: $font-size-standard-extra;
+  font-weight: $font-weight-light;
+  line-height: $font-line-height-medium;
+
+  :any-link {
+    font-size: inherit;
+    color: $primary-color;
+    text-decoration: underline;
+    font-weight: $font-weight-heavy;
+  }
+
+}
+
+//global styles
+.spacing-top {
+  margin-top: $spacing-medium;
+}
+
+.text-center {
+  text-align: center;
+}

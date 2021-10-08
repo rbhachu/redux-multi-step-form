@@ -1,0 +1,63 @@
+@use '../../assets/scss/variables' as *; // * removes need to call namespace
+@use '../../assets/scss/mixin' as *; // * removes need to call namespace
+
+// Progressbar
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: $spacing-large 0;
+
+  // in-active circles
+  .progress-step {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $third-color;
+    border-radius: 50%;
+    border: $border-width-large solid $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    z-index: 2;
+  }
+
+  // circle
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+    //color: $primary-color;
+  }
+
+  // top text
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(-100% + $spacing-medium);
+    font-size: $font-size-small;
+    color: $primary-color;
+    font-weight: $font-weight-heavy;
+  }
+
+  // active circle
+  .progress-step-active {
+    background-color: $primary-color-background;
+    color: $third-color;
+    border: none;
+  }
+
+}
+
+// progress bar line
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 100%;
+  background-color: $primary-color;
+  z-index: 1;
+}

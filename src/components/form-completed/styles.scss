@@ -1,0 +1,52 @@
+@use '../../assets/scss/variables' as *; // * removes need to call namespace
+
+.form-complete {
+
+  h2 {
+    color: $color-success;
+    text-align: center;
+  }
+
+  img {
+    margin: 0 auto;
+    padding: $spacing-medium 0 $spacing-large 0;
+    width: 100px;
+    height: auto;
+  }
+
+    // fade in image transition
+    .fade-in-image {
+      animation: fadeIn 2.5s;
+      -webkit-animation: fadeIn 2.5s;
+      -moz-animation: fadeIn 2.5s;
+      -o-animation: fadeIn 2.5s;
+      -ms-animation: fadeIn 2.5s;
+    }
+    @keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
+
+  p {
+    text-align: center;
+    color: $color-success;
+    font-weight: $font-weight-medium;
+    line-height: $font-line-height-large;
+  }
+
+}
+
+// JSON page code outout render
+.code-output {
+  margin-top: $spacing-xlarge;
+  border-radius: $border-radius-medium;
+  background-color: $secondary-color;
+
+  // code format output
+  pre {
+    font-weight: $font-weight-medium;
+    padding: $spacing-medium;
+    color: $primary-color-background;
+  }
+
+}

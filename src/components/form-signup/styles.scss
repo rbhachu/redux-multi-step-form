@@ -1,0 +1,48 @@
+@use '../../assets/scss/variables' as *; // * removes need to call namespace
+@use '../../assets/scss/buttons' as *; // * removes need to call namespace
+
+form#form-signup {
+
+  p {
+    margin: $spacing-medium 0;
+    display: block;
+  }
+
+  label {
+    font-size: $font-size-standard;
+    margin-right: $spacing-vsmall;
+    font-weight: $font-weight-heavy;
+  }
+
+  input:not([type="submit"]){ // target all inputs except submit button
+    width: 100%;
+    margin-top: $spacing-vsmall; // remove??
+    flex: 1;
+    padding: $spacing-vsmall;
+    border: $border-width-large solid $primary-color;
+
+    &::placeholder {
+      color: $secondary-color;
+    }
+
+    &:hover {
+      background-color: $primary-color-highlight;
+    }
+
+  }
+
+  .required-asterix {
+    color: $primary-color;
+    padding-left: $spacing-vsmall;
+  }
+
+  .disclaimer-text {
+    font-size: $font-size-standard;
+  }
+  
+  // for validation error text
+  .error-message {
+    color: $color-alert;
+  }   
+
+}

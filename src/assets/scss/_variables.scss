@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+// font
+$font-default: 'Roboto', sans-serif;
+//$font-default: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+//$font-default: Helvetica, sans-serif, Arial;
+
+// font sizes
+$font-size-base: 16px;
+$font-size-small: 0.85rem;
+$font-size-standard: 1rem;
+$font-size-standard-extra: 1.1rem;
+$font-size-medium: 1.3rem; // h2
+$font-size-large: 2rem; // h1
+
+// font line heights
+$font-line-height-default: normal;
+$font-line-height-small: 1.2rem;
+$font-line-height-medium: 1.4rem;
+$font-line-height-large: 2rem;
+
+// font weights
+$font-weight-none: normal;
+$font-weight-light: 100;
+$font-weight-medium: 500;
+$font-weight-heavy: 700;
+$font-weight-heavyplus: 900;
+
+
+// spacings
+$spacing-vsmall: 0.5rem;
+$spacing-small: 0.75rem;
+$spacing-medium: 1rem;
+$spacing-large: 1.5rem;
+$spacing-xlarge: 2rem;
+
+
+// colors
+$primary-color: #000;
+$primary-color-highlight: yellow;
+$primary-color-background: #D03987;
+$secondary-color: #ccc;
+$third-color: #fff;
+$color-success: green;
+$color-alert: red;
+
+
+// borders
+$border-width-small: 1px;
+$border-width-medium: 2px;
+$border-width-large: 3px;
+$border-radius-small: 0.25rem;
+$border-radius-medium: 0.5rem;
+$border-radius-large: 1rem;
+
+// breakpoints
+$breakpoint1: 630px;
