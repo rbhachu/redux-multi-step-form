@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { formStage, formPrivacy } from '../../store/rootSlice'
 import './styles.scss';
@@ -13,48 +13,44 @@ function FormUserPrivacy({ pageTitle, submitButtonText, previousButton }) {
   const stateSignup1 = useSelector(state => state.FormUserPrivacy.signup1)
   const stateSignup2 = useSelector(state => state.FormUserPrivacy.signup2)
 
-  // form values initial state - getting from redux
-  const [formData, setFormData] = useState({
-    signup1: stateSignup1,
-    signup2: stateSignup2
-  })
+  const state = useSelector(state => state)
+  const stateOutput = (`JSON Data Form-Privacy: ${JSON.stringify(state, null, 2)}`)
+  //console.log(stateOutput) // output to console.log
 
-  // form values onchange
-  const [isChecked1, setIsChecked1] = useState(formData.signup1);
-  const [isChecked2, setIsChecked2] = useState(formData.signup2);
-
-  // form values onchange
+  // toggle checkboxes onchange
+  const [isChecked1, setIsChecked1] = useState(stateSignup1 || false); // from redux initial state or form
+  const [isChecked2, setIsChecked2] = useState(stateSignup2 || false); // from redux initial state or form
   const handleChange1 = (e) => {  
     setIsChecked1(!isChecked1);
-    !isChecked1 ? setFormData({signup1: true }) : setFormData({signup1: false })
   }
   const handleChange2 = (e) => {
     setIsChecked2(!isChecked2);
-    !isChecked2 ? setFormData({signup2: true }) : setFormData({signup2: false })
   }
 
   // onsubmit
+  const [isSubmitted, setIsSubmitted] = useState(false) // state for form status
   const handleSubmit = (e) => {
     e.preventDefault(); // stop form submission
-
-    const { name, value } = e.target
-    setFormData({
-      ...formData, 
-      [name]: value
-    })
-
-    // update Redux Slice
-    dispatch(
-      formStage(3) // update formStage and move to next stage
-    )
-    dispatch(
-      formPrivacy({
-        signup1: formData.signup1,
-        signup2: formData.signup2
-      })
-    );
-    
+    setIsSubmitted(true) // update form status to submitted
   }
+
+  useEffect(() => {
+    if (isSubmitted) { // check if form status submitted
+
+      // update Redux Store Slice
+      dispatch(
+        formStage(3) // update formStage and move to next stage
+      )
+      dispatch(
+        formPrivacy({
+          signup1: isChecked1, // update form checkbox status
+          signup2: isChecked2
+        })
+      );
+
+    }
+
+  }, [isSubmitted, dispatch, stateOutput, isChecked1, isChecked2])
 
   return (
 
@@ -64,7 +60,6 @@ function FormUserPrivacy({ pageTitle, submitButtonText, previousButton }) {
         <form 
           name="form-privacy"
           id="form-privacy"
-          //onSubmit={(e) => handleSubmit(e)}
           onSubmit={handleSubmit}
         >
       
@@ -73,10 +68,8 @@ function FormUserPrivacy({ pageTitle, submitButtonText, previousButton }) {
             type="checkbox" 
             id="signup1"
             name="signup1"
-            //value={formData.signup1}
-            //onClick={handleChange1}
-            //onChange={handleChange1}
-            onChange={(e) => handleChange1(e)}
+            onChange={handleChange1}
+            checked={isChecked1}
           />
           <label htmlFor="signup1">Recieve updates about Tray.io product by email</label>
         </p>
@@ -86,10 +79,8 @@ function FormUserPrivacy({ pageTitle, submitButtonText, previousButton }) {
             type="checkbox" 
             id="signup2"
             name="signup2"
-            //value={formData.signup2}
-            //onClick={handleChange2}
-            //onChange={handleChange2}
-            onChange={(e) => handleChange2(e)}
+            onChange={handleChange2}
+            checked={isChecked2}
           />
           <label htmlFor="signup2">Recieve communication by email for other products created by the Tray.io team</label>
         </p>

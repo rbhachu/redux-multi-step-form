@@ -9,7 +9,6 @@ const rootSlice = createSlice({
     FormStage: 1, // default page stage to show on page load
     FormUserSignup: "",
     FormUserPrivacy: ""
-    // add another value of if completed for each??? stage 1 - yes, stage 2, yes??
   },
 
   reducers: {

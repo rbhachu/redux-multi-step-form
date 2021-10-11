@@ -47,6 +47,7 @@
     font-weight: $font-weight-medium;
     padding: $spacing-medium;
     color: $primary-color-background;
+    white-space: pre-wrap; // break words that are too long
   }
 
 }
